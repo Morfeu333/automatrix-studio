@@ -57,6 +57,7 @@ export function ProjectGallery({ entry }: { entry: ShowcaseProjectDetail }) {
                     autoPlay
                     muted
                     loop
+                    maxResolution="1080p"
                     className="h-full w-full object-cover"
                   />
                 ) : (

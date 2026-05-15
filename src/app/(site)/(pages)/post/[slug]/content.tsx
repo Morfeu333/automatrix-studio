@@ -357,6 +357,7 @@ export const Content = ({ post }: ContentProps) => {
                                 loop
                                 muted
                                 playsInline
+                                maxResolution="1080p"
                                 className="h-full w-full object-cover"
                               />
                             ) : (
