@@ -18,7 +18,10 @@ const singletonTypes = new Set([
   "peoplePage",
   "companyInfo",
   "threeDAssets",
-  "showcasePage"
+  "showcasePage",
+  "inspectablesConfig",
+  "scenesConfig",
+  "physicsConfig"
 ])
 
 const singletonActions = new Set(["publish", "discardChanges", "restore"])
@@ -63,7 +66,7 @@ function structure(S: StructureBuilder) {
                     .documentId("companyInfo")
                 ),
               S.listItem()
-                .title("3D Assets")
+                .title("3D Assets (DEPRECATED)")
                 .id("threeDAssets")
                 .child(
                   S.document()
@@ -124,6 +127,43 @@ function structure(S: StructureBuilder) {
             .title("Careers")
             .items([
               S.documentTypeListItem("openPosition").title("Open Positions")
+            ])
+        ),
+
+      S.divider(),
+
+      // --- 3D Config ---
+      // Binary files live in public/3d/; only editable content is here.
+      S.listItem()
+        .title("3D Config")
+        .child(
+          S.list()
+            .title("3D Config")
+            .items([
+              S.listItem()
+                .title("Inspectables")
+                .id("inspectablesConfig")
+                .child(
+                  S.document()
+                    .schemaType("inspectablesConfig")
+                    .documentId("inspectablesConfig")
+                ),
+              S.listItem()
+                .title("Scenes")
+                .id("scenesConfig")
+                .child(
+                  S.document()
+                    .schemaType("scenesConfig")
+                    .documentId("scenesConfig")
+                ),
+              S.listItem()
+                .title("Physics")
+                .id("physicsConfig")
+                .child(
+                  S.document()
+                    .schemaType("physicsConfig")
+                    .documentId("physicsConfig")
+                )
             ])
         )
     ])

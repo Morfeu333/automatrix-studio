@@ -38,6 +38,21 @@ const nextConfig: NextConfig = {
     return config
   },
 
+  async headers() {
+    return [
+      {
+        // Filenames under /public/3d are content-hashed, so URLs are immutable.
+        source: "/3d/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable"
+          }
+        ]
+      }
+    ]
+  },
+
   async rewrites() {
     return [
       {
