@@ -15,10 +15,12 @@ import { fetchHomepage, fetchOrganizationData } from "./sanity"
 
 export const metadata: Metadata = {
   title: {
-    absolute: "automatrix.studio | We make cool shit that performs."
+    absolute: "Automatrix IA | Automatize com Inteligência Artificial"
   },
+  description:
+    "Crie automações, apps e workflows conversando com nosso agente IA. n8n, chatbots, WhatsApp, CRM e muito mais.",
   alternates: {
-    canonical: "https://automatrix.studio"
+    canonical: "https://automatrix-ia.com"
   }
 }
 

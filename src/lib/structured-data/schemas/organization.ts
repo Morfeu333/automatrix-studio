@@ -1,5 +1,5 @@
-const SITE_URL = "https://automatrix.studio"
-const SITE_NAME = "automatrix.studio"
+const SITE_URL = "https://automatrix-ia.com"
+const SITE_NAME = "Automatrix IA"
 
 interface Founder {
   name: string

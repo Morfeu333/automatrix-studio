@@ -149,7 +149,7 @@ body {
 }
 
 *::selection {
-  @apply bg-brand-o text-brand-k;
+  @apply bg-brand-green text-brand-k;
 }
 
 img {

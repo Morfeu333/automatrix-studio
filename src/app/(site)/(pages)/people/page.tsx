@@ -18,9 +18,11 @@ import {
 import { Values } from "./values"
 
 export const metadata: Metadata = {
-  title: "People",
+  title: "Equipe | Automatrix IA",
+  description:
+    "Conheça a equipe da Automatrix IA — Lucas (CEO/Dev), Leo (Full-Stack), Henrique (Colaborador).",
   alternates: {
-    canonical: "https://automatrix.studio/people"
+    canonical: "https://automatrix-ia.com/people"
   }
 }
 

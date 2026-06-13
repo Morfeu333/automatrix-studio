@@ -13,23 +13,24 @@ export default {
       },
       colors: {
         brand: {
-          // Automatrix cyberpunk palette
-          bg: "#050810",         // deep space black
-          cyan: "#00f0ff",       // neon cyan (primary)
-          green: "#00ff88",      // matrix green (secondary)
+          // Automatrix brand palette
+          bg: "#060a0f",         // deep dark (data center background)
+          cyan: "#00f0ff",       // neon cyan (3D/tech accent)
+          green: "#00c46e",      // Automatrix primary green (from logo)
+          "green-bright": "#00ff88", // matrix green (highlights)
           purple: "#7B2FFF",     // violet accent
-          w1: "#e8f4f8",         // cold white
-          w2: "#a0bcc8",         // muted blue-white
-          g1: "#4a6880",         // dark blue-grey
-          g2: "#1a2535",         // near-black blue
-          k: "#050810",          // background
-          // Legacy aliases kept for component compat
-          o: "#00f0ff",
-          o2: "#00d4e8",
-          r: "#7B2FFF",
-          r2: "#9d5fff",
-          y: "#00ff88",
-          g: "#00ff88"
+          w1: "#e8f4f8",         // cold white text
+          w2: "#8aabb8",         // muted text
+          g1: "#3a5a6a",         // dark dividers
+          g2: "#111d28",         // card backgrounds
+          k: "#060a0f",          // page background
+          // Legacy color aliases (used throughout basement codebase)
+          o: "#00c46e",          // was orange → now Automatrix green
+          o2: "#00a85e",         // was orange2 → green dark
+          r: "#00f0ff",          // was red → cyan (alerts use cyan now)
+          r2: "#7B2FFF",         // was red2 → purple
+          y: "#00ff88",          // was yellow → matrix green
+          g: "#00c46e"           // was green → stays green
         },
         codeblock: {
           o: "#FF4D00",

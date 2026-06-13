@@ -14,9 +14,11 @@ import { Testimonials } from "./testimonials"
 import { VenturesBanner } from "./ventures"
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Serviços | Automatrix IA",
+  description:
+    "n8n workflows, AI chatbots para WhatsApp/Telegram, automação de CRM, agentes IA, Voice AI e muito mais.",
   alternates: {
-    canonical: "https://automatrix.studio/services"
+    canonical: "https://automatrix-ia.com/services"
   }
 }
 

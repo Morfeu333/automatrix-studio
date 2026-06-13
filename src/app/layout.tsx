@@ -12,23 +12,23 @@ import { cn } from "@/utils/cn"
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | automatrix",
-    default: "automatrix | AI Automation Agency"
+    template: "%s | Automatrix IA",
+    default: "Automatrix IA | Automatize com Inteligência Artificial"
   },
   description:
-    "Automatrix — We automate what slows you down. AI agents, workflows, and intelligent systems for ambitious businesses.",
+    "Crie automações, apps e workflows conversando com nosso agente IA. n8n, chatbots WhatsApp, CRM e agentes inteligentes para empresas.",
   twitter: {
-    creator: "@automatrix",
-    site: "@automatrix",
+    creator: "@automatrix_ai",
+    site: "@automatrix_ai",
     card: "summary_large_image",
-    title: "automatrix | AI Automation Agency",
+    title: "Automatrix IA | Automatize com Inteligência Artificial",
     images: {
-      url: "/images/twitter-image.png",
-      width: 1200,
-      height: 642
+      url: "/images/automatrix-icon.png",
+      width: 512,
+      height: 512
     },
     description:
-      "Automatrix — We automate what slows you down. AI agents, workflows, and intelligent systems."
+      "Crie automações, apps e workflows conversando com nosso agente IA. n8n, chatbots, CRM e muito mais."
   },
   openGraph: {
     images: {

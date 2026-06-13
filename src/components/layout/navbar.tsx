@@ -16,20 +16,20 @@ export const Navbar = async () => {
 
   const LINKS: NavbarLink[] = [
     {
-      title: "Home",
+      title: "Hub",
       href: "/"
     },
     {
-      title: "Services",
+      title: "Serviços",
       href: "/services"
     },
     {
-      title: "Showcase",
+      title: "Clientes",
       href: "/showcase",
       count: projectsCount
     },
     {
-      title: "People",
+      title: "Equipe",
       href: "/people"
     },
     {
@@ -38,7 +38,7 @@ export const Navbar = async () => {
       count: postsCount
     },
     {
-      title: "Lab",
+      title: "Sandbox",
       href: "/lab"
     }
   ]
@@ -48,9 +48,9 @@ export const Navbar = async () => {
       key="navbar-content"
       links={LINKS}
       socialLinks={{
-        twitter: companyInfo.twitter || "",
-        instagram: companyInfo.instagram || "",
-        github: companyInfo.github || "",
+        twitter: companyInfo.twitter || "https://x.com/automatrix_ai",
+        instagram: companyInfo.instagram || "https://instagram.com/automatrix.ia",
+        github: companyInfo.github || "https://github.com/morfeu333",
         linkedIn: companyInfo.linkedIn || ""
       }}
       newsletter={companyInfo.newsletter || []}

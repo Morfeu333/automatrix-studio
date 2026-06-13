@@ -8,6 +8,13 @@ interface Character {
   lensGeomtry?: CharacterMeshes
 }
 
+// Automatrix team member IDs — matched to face texture atlas
+export enum AutomatrixTeamMember {
+  Lucas = 0,    // Fundador / CEO
+  Leo = 5,      // Dev Full-Stack
+  Henrique = 8  // Colaborador
+}
+
 export enum CharacterAnimationName {
   "Home.01" = "Home.01",
   "Home.02" = "Home.02",
