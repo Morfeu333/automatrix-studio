@@ -53,7 +53,7 @@ export const generateEmailTemplate = (formData: {
             text-shadow: 0 2px 4px rgba(255, 77, 0, 0.2);
           "
         >
-          basement.studio
+          automatrix.studio
         </h1>
       </div>
 

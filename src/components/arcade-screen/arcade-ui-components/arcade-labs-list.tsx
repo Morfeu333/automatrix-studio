@@ -34,7 +34,7 @@ export const ArcadeLabsList = ({
   const isInGame = useArcadeStore((state) => state.isInGame)
 
   const handleExperimentClick = useCallback((data: Experiment) => {
-    window.open(`https://lab.basement.studio/experiments/${data.url}`, "_blank")
+    window.open(`https://lab.automatrix.studio/experiments/${data.url}`, "_blank")
   }, [])
 
   useKeyPress(
@@ -271,7 +271,7 @@ const ViewMore = ({
   const experiments = useArcadeStore((state) => state.labTabs)
   const setCursor = useCursor()
   const handleViewMoreClick = useCallback(() => {
-    window.open("https://lab.basement.studio/", "_blank")
+    window.open("https://lab.automatrix.studio/", "_blank")
   }, [])
 
   const isSelected = isInLabTab && labTabIndex === experiments.length - 4

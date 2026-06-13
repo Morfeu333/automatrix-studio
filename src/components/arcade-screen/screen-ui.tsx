@@ -50,7 +50,7 @@ export const createLabTabs = (experiments: Experiment[]): LabTab[] => {
       id: `experiment-${exp._title}`,
       type: "experiment" as const,
       title: exp._title.toUpperCase(),
-      url: `https://lab.basement.studio/experiments/${exp.url}`,
+      url: `https://lab.automatrix.studio/experiments/${exp.url}`,
       isClickable: true
     })),
 
@@ -59,7 +59,7 @@ export const createLabTabs = (experiments: Experiment[]): LabTab[] => {
       id: "view-more",
       type: "button",
       title: "VIEW MORE",
-      url: "https://lab.basement.studio/",
+      url: "https://lab.automatrix.studio/",
       isClickable: true
     },
 
@@ -68,7 +68,7 @@ export const createLabTabs = (experiments: Experiment[]): LabTab[] => {
       id: "chronicles",
       type: "featured",
       title: "CHRONICLES",
-      url: "https://chronicles.basement.studio",
+      url: "https://chronicles.automatrix.studio",
       isClickable: true
     },
 
@@ -77,7 +77,7 @@ export const createLabTabs = (experiments: Experiment[]): LabTab[] => {
       id: "looper",
       type: "featured",
       title: "LOOPER",
-      url: "https://looper.basement.studio/",
+      url: "https://looper.automatrix.studio/",
       isClickable: true
     },
 
@@ -86,7 +86,7 @@ export const createLabTabs = (experiments: Experiment[]): LabTab[] => {
       id: "shaderlab",
       type: "featured",
       title: "SHADER LAB",
-      url: "https://eng.basement.studio/tools/shader-lab",
+      url: "https://eng.automatrix.studio/tools/shader-lab",
       isClickable: true
     }
   ]

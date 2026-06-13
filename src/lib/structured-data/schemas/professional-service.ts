@@ -3,7 +3,7 @@ import type { PortableTextBlock } from "@/service/sanity/types"
 import { extractPlainText } from "../extract-text"
 import { ORGANIZATION_ID } from "./organization"
 
-const SITE_URL = "https://basement.studio"
+const SITE_URL = "https://automatrix.studio"
 
 interface ServiceCategory {
   title: string

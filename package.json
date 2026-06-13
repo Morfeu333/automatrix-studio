@@ -1,5 +1,5 @@
 {
-  "name": "website-2k25",
+  "name": "automatrix-studio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -105,5 +105,6 @@
     "tsx": "^4.21.0",
     "typescript": "^5.8.2"
   },
-  "packageManager": "pnpm@9.15.6"
+  "packageManager": "pnpm@9.15.6",
+  "description": "Automatrix \u2014 AI Automation Agency 3D Interactive Website"
 }

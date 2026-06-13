@@ -7,7 +7,7 @@ import { LabClient } from "./client"
 export const metadata: Metadata = {
   title: "Lab",
   alternates: {
-    canonical: "https://basement.studio/lab"
+    canonical: "https://automatrix.studio/lab"
   }
 }
 
@@ -19,7 +19,7 @@ const Laboratory = async () => {
     /iPhone|iPad|iPod|Android|webOS|BlackBerry|Windows Phone/i.test(userAgent)
 
   if (isMobile) {
-    redirect("https://lab.basement.studio/")
+    redirect("https://lab.automatrix.studio/")
   }
 
   return <LabClient />

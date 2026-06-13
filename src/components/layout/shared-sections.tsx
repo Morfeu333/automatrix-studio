@@ -174,7 +174,7 @@ export const Copyright = ({ className }: { className?: string }) => (
       className
     )}
   >
-    © basement.studio LLC {new Date().getFullYear()} all rights reserved
+    © automatrix.studio LLC {new Date().getFullYear()} all rights reserved
   </p>
 )
 

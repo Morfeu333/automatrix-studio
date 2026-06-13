@@ -21,9 +21,9 @@ export async function submitContactForm(formData: ContactFormData) {
         Authorization: `Bearer ${process.env.RESEND_API_KEY}`
       },
       body: JSON.stringify({
-        from: "hello@basement.studio",
-        to: ["sales@basement.studio"],
-        subject: `${formData.name} - ${formData.company} | Contact Us <basement.studio>`,
+        from: "hello@automatrix.studio",
+        to: ["sales@automatrix.studio"],
+        subject: `${formData.name} - ${formData.company} | Contact Us <automatrix.studio>`,
         html
       })
     })

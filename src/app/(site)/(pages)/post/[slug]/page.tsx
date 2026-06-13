@@ -31,7 +31,7 @@ export const generateMetadata = async ({ params }: ProjectPostProps) => {
       absolute: `${post.title ?? "Untitled"} | Blog`
     },
     alternates: {
-      canonical: `https://basement.studio/post/${slug}`
+      canonical: `https://automatrix.studio/post/${slug}`
     }
   }
 }

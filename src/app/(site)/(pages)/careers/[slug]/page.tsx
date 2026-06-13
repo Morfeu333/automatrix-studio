@@ -29,7 +29,7 @@ export const generateMetadata = async ({ params }: CareerPostProps) => {
       absolute: `${meta.title ?? "Untitled"} | Careers`
     },
     alternates: {
-      canonical: `https://basement.studio/careers/${slug}`
+      canonical: `https://automatrix.studio/careers/${slug}`
     }
   }
 }

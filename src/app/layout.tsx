@@ -12,23 +12,23 @@ import { cn } from "@/utils/cn"
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | basement.studio",
-    default: "basement.studio | We make cool shit that performs."
+    template: "%s | automatrix",
+    default: "automatrix | AI Automation Agency"
   },
   description:
-    "A digital studio & branding powerhouse making cool shit that performs.",
+    "Automatrix — We automate what slows you down. AI agents, workflows, and intelligent systems for ambitious businesses.",
   twitter: {
-    creator: "@basementstudio",
-    site: "@basementstudio",
+    creator: "@automatrix",
+    site: "@automatrix",
     card: "summary_large_image",
-    title: "basement.studio | We make cool shit that performs.",
+    title: "automatrix | AI Automation Agency",
     images: {
       url: "/images/twitter-image.png",
       width: 1200,
       height: 642
     },
     description:
-      "A digital studio & branding powerhouse making cool shit that performs."
+      "Automatrix — We automate what slows you down. AI agents, workflows, and intelligent systems."
   },
   openGraph: {
     images: {

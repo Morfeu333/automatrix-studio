@@ -6,7 +6,7 @@ import { ShowcaseList } from "./showcase-list"
 export const metadata: Metadata = {
   title: "Showcase",
   alternates: {
-    canonical: "https://basement.studio/showcase"
+    canonical: "https://automatrix.studio/showcase"
   }
 }
 

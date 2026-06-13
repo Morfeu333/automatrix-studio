@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Doom",
   alternates: {
-    canonical: "https://basement.studio/doom"
+    canonical: "https://automatrix.studio/doom"
   }
 }
 

@@ -13,7 +13,7 @@ export const LabClient = () => {
 
   useEffect(() => {
     if (canvasErrorBoundaryTriggered) {
-      router.push("https://lab.basement.studio/")
+      router.push("https://lab.automatrix.studio/")
     }
   }, [canvasErrorBoundaryTriggered, router])
 

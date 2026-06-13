@@ -1,5 +1,5 @@
-const SITE_URL = "https://basement.studio"
-const SITE_NAME = "basement.studio"
+const SITE_URL = "https://automatrix.studio"
+const SITE_NAME = "automatrix.studio"
 
 interface Founder {
   name: string
@@ -78,7 +78,7 @@ export const generateOrganizationSchema = (data: OrganizationData) => {
     "@type": "Organization",
     "@id": ORGANIZATION_ID,
     name: SITE_NAME,
-    alternateName: ["basement studio", "basement", "bsmnt"],
+    alternateName: ["automatrix", "automatrix", "bsmnt"],
     url: SITE_URL,
     ...(data.logoUrl ? { logo: data.logoUrl } : {}),
     ...(data.description ? { description: data.description } : {}),

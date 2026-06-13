@@ -27,7 +27,7 @@ export const generateMetadata = async ({ params }: ProjectPostProps) => {
       absolute: `${meta.title ?? "Untitled"} | Showcase`
     },
     alternates: {
-      canonical: `https://basement.studio/showcase/${slug}`
+      canonical: `https://automatrix.studio/showcase/${slug}`
     }
   }
 }

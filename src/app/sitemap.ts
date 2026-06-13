@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 
 import { sanityFetch } from "@/service/sanity"
 
-const SITE_URL = "https://basement.studio"
+const SITE_URL = "https://automatrix.studio"
 
 const SITEMAP_QUERY = /* groq */ `{
   "posts": *[_type == "post" && defined(slug.current)]{

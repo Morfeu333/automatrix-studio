@@ -16,7 +16,7 @@ import { VenturesBanner } from "./ventures"
 export const metadata: Metadata = {
   title: "Services",
   alternates: {
-    canonical: "https://basement.studio/services"
+    canonical: "https://automatrix.studio/services"
   }
 }
 

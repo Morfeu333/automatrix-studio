@@ -6,7 +6,7 @@ import { ContactForm } from "./form/contact-form"
 export const metadata: Metadata = {
   title: "Contact Us",
   alternates: {
-    canonical: "https://basement.studio/contact"
+    canonical: "https://automatrix.studio/contact"
   }
 }
 

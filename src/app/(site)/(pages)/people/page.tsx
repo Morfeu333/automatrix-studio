@@ -20,7 +20,7 @@ import { Values } from "./values"
 export const metadata: Metadata = {
   title: "People",
   alternates: {
-    canonical: "https://basement.studio/people"
+    canonical: "https://automatrix.studio/people"
   }
 }
 

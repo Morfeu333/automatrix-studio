@@ -8,7 +8,7 @@ import { Hero } from "./hero"
 export const metadata: Metadata = {
   title: "Blog",
   alternates: {
-    canonical: "https://basement.studio/blog"
+    canonical: "https://automatrix.studio/blog"
   }
 }
 

@@ -29,15 +29,15 @@ export const ArcadeFeatured = () => {
     isInLabTab && labTabIndex === experiments.length - 1
 
   const handleChroniclesClick = useCallback(() => {
-    window.open("https://chronicles.basement.studio", "_blank")
+    window.open("https://chronicles.automatrix.studio", "_blank")
   }, [])
 
   const handleLooperClick = useCallback(() => {
-    window.open("https://looper.basement.studio/", "_blank")
+    window.open("https://looper.automatrix.studio/", "_blank")
   }, [])
 
   const handleShaderLabClick = useCallback(() => {
-    window.open("https://eng.basement.studio/tools/shader-lab", "_blank")
+    window.open("https://eng.automatrix.studio/tools/shader-lab", "_blank")
   }, [])
 
   useKeyPress(

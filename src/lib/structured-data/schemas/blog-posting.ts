@@ -3,14 +3,14 @@ import type { PortableTextBlock, SanityImage } from "@/service/sanity/types"
 import { extractPlainText } from "../extract-text"
 import { createImageObject } from "../image-object"
 
-const SITE_URL = "https://basement.studio"
-const SITE_NAME = "basement.studio"
+const SITE_URL = "https://automatrix.studio"
+const SITE_NAME = "automatrix.studio"
 const PUBLISHER_LOGO = {
   "@type": "ImageObject" as const,
-  url: `${SITE_URL}/images/logobasement.png`,
+  url: `${SITE_URL}/images/logoautomatrix.png`,
   width: 208,
   height: 208,
-  caption: "basement.studio logo"
+  caption: "automatrix.studio logo"
 }
 
 interface BlogPostData {

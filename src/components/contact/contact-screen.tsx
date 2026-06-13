@@ -277,8 +277,8 @@ export const ContactScreen = () => {
                   </span>
                 </Link>
               </div>
-              <Link href="mailto:hello@basement.studio" target="_blank">
-                <span className="actionable">(hello@basement.studio)</span>
+              <Link href="mailto:hello@automatrix.studio" target="_blank">
+                <span className="actionable">(hello@automatrix.studio)</span>
               </Link>
             </div>
           </div>

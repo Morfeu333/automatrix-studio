@@ -5,7 +5,7 @@ import Basketball from "./client"
 export const metadata: Metadata = {
   title: "basement Shot",
   alternates: {
-    canonical: "https://basement.studio/basketball"
+    canonical: "https://automatrix.studio/basketball"
   }
 }
 

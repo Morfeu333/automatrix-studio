@@ -6,7 +6,7 @@ const socialLinks = [
   {
     Icon: LinkedInIcon,
     href: (slug: string, _: string) => {
-      const url = `https://basement.studio/post/${slug}`
+      const url = `https://automatrix.studio/post/${slug}`
       return `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`
     },
     label: "Share on LinkedIn"
@@ -14,8 +14,8 @@ const socialLinks = [
   {
     Icon: XIcon,
     href: (slug: string, title: string) => {
-      const url = `https://basement.studio/post/${slug.toLowerCase().replace(/ /g, "-")}`
-      const text = `Check out "${title}" from @basementstudio `
+      const url = `https://automatrix.studio/post/${slug.toLowerCase().replace(/ /g, "-")}`
+      const text = `Check out "${title}" from @automatrix_ai `
       return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`
     },
     label: "Share on X"
@@ -61,7 +61,7 @@ export const BlogMeta = ({ data, categories }: BlogMetaComponentProps) => (
             : null}
           <span className="inline-block size-1 bg-brand-g1" />{" "}
           {data.authors?.map((author) => author.title).join(", ") ||
-            "basement.studio"}
+            "automatrix.studio"}
         </p>
         <div className="flex gap-2">
           {socialLinks.map((social, index) => (

@@ -3,8 +3,8 @@ import type { PortableTextBlock, SanityImage } from "@/service/sanity/types"
 import { extractPlainText } from "../extract-text"
 import { createImageObject } from "../image-object"
 
-const SITE_URL = "https://basement.studio"
-const SITE_NAME = "basement.studio"
+const SITE_URL = "https://automatrix.studio"
+const SITE_NAME = "automatrix.studio"
 
 interface Award {
   title: string

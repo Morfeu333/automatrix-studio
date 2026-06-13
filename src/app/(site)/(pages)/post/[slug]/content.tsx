@@ -21,7 +21,7 @@ interface ContentProps {
   post: PostDetail
 }
 
-const SITE_ORIGIN = "https://basement.studio"
+const SITE_ORIGIN = "https://automatrix.studio"
 
 const getVideoMimeType = (url: string): string | undefined => {
   const path = url.split("?")[0]?.toLowerCase() ?? ""

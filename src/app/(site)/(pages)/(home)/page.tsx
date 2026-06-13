@@ -15,10 +15,10 @@ import { fetchHomepage, fetchOrganizationData } from "./sanity"
 
 export const metadata: Metadata = {
   title: {
-    absolute: "basement.studio | We make cool shit that performs."
+    absolute: "automatrix.studio | We make cool shit that performs."
   },
   alternates: {
-    canonical: "https://basement.studio"
+    canonical: "https://automatrix.studio"
   }
 }
 
