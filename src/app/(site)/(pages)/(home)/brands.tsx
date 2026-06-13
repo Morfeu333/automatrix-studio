@@ -38,6 +38,8 @@ export const Brands = ({ data }: { data: HomepageData }) => {
     mobileBrands.splice(randomIndex, 1)
   }
 
+  if (brands.length === 0) return null
+
   return (
     <>
       <BrandsDesktop brands={brands} />

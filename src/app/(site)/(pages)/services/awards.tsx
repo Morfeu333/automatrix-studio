@@ -58,6 +58,8 @@ export const Awards = ({ data }: { data: AwardDisplay[] }) => {
   const [currentImageId, setCurrentImageId] = useState<string | null>(null)
   const [isRevealing, setIsRevealing] = useState(false)
 
+  if (data.length === 0) return null
+
   const handleMouseEnter = useCallback(
     (id: string) => {
       if (!isDesktop) return

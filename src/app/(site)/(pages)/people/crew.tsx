@@ -33,8 +33,7 @@ export const Crew = ({ data }: { data: PersonDisplay[] }) => {
   const groupedPeople = useMemo(() => {
     const people = data.reduce(
       (acc, person) => {
-        const department = person.department
-        if (!department) return acc
+        const department = person.department ?? "Geral"
         if (!acc[department]) acc[department] = []
         acc[department].push(person)
         return acc
@@ -42,17 +41,15 @@ export const Crew = ({ data }: { data: PersonDisplay[] }) => {
       {} as Record<string, PersonDisplay[]>
     )
 
-    const orderedDepartments = ["Management", "Design", "Development"]
-
+    // Sort each department alphabetically by name
     const sortedPeople: Record<string, PersonDisplay[]> = {}
-
-    orderedDepartments.forEach((dept) => {
-      if (people[dept]) {
+    Object.keys(people)
+      .sort()
+      .forEach((dept) => {
         sortedPeople[dept] = people[dept].sort((a, b) =>
           a.title.localeCompare(b.title, undefined, { sensitivity: "base" })
         )
-      }
-    })
+      })
 
     return sortedPeople
   }, [data])
@@ -82,7 +79,7 @@ export const Crew = ({ data }: { data: PersonDisplay[] }) => {
     <section className="grid-layout mb-18 lg:mb-48">
       <div className="col-span-full -mb-6 flex items-end justify-between lg:col-start-5 lg:col-end-13">
         <h2 className="text-f-h1-mobile text-brand-w2 lg:text-f-h1">
-          The Crew
+          A Equipe
         </h2>
         <p className="text-f-h1-mobile text-brand-g1 lg:text-f-h1">
           {flattenedPeople.length}
@@ -337,7 +334,7 @@ export const CrewFooter = ({ spanStart, spanEnd }: CrewFooterProps) => {
         className="relative z-10 flex h-4 items-center gap-1 bg-brand-k text-f-p-mobile text-brand-w1 lg:text-f-p"
       >
         <span className="actionable flex items-center gap-1">
-          Join the Crew <Arrow className="size-4" />
+          Faça parte <Arrow className="size-4" />
         </span>
       </button>
     </div>

@@ -84,7 +84,7 @@ export const InternalLinks = ({
             fromMobileNav={onNav}
           >
             <span className="actionable">{link.title}</span>
-            {link.count && (
+            {(link.count ?? 0) > 0 && (
               <sup className="translate-y-1.25 text-f-p-mobile !font-medium text-brand-g1 lg:text-f-p">
                 <span className="tabular-nums">({link.count})</span>
               </sup>
@@ -121,7 +121,7 @@ export const InternalLinks = ({
             onNav && isInPath("/contact", pathname) && "!text-brand-o"
           )}
         >
-          <span className="actionable">Contact Us</span>
+          <span className="actionable">Contato</span>
         </button>
       </motion.li>
     </ul>

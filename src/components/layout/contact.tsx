@@ -6,16 +6,16 @@ export const Contact = () => (
       <div className="with-diagonal-lines pointer-events-none !absolute inset-0" />
 
       <h3 className="relative col-span-2 mb-2 text-f-h3-mobile text-brand-g1 lg:text-f-h3">
-        Contact
+        Contato
       </h3>
 
       <p className="relative col-span-8 row-start-2 text-f-h1-mobile text-brand-w2 lg:text-f-h1">
-        Let&apos;s make an impact together.
+        Vamos automatizar juntos.
       </p>
 
       <div className="relative col-span-5 row-start-3 flex items-center text-[2rem] text-f-h1-mobile text-brand-w1 lg:text-f-h1">
-        <Link href="mailto:hello@automatrix.studio" target="_blank">
-          <span className="actionable">hello@automatrix.studio</span>
+        <Link href="mailto:lucas@automatrix-ia.com" target="_blank">
+          <span className="actionable">lucas@automatrix-ia.com</span>
         </Link>
       </div>
     </div>

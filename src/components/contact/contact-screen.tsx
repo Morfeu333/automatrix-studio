@@ -256,14 +256,14 @@ export const ContactScreen = () => {
             </form>
             <div className="flex w-full items-center justify-between text-[12px] uppercase">
               <div className="flex items-center gap-[2px]">
-                <Link href="https://x.com/basementstudio" target="_blank">
+                <Link href="https://x.com/automatrix_ai" target="_blank">
                   <span className="actionable [text-shadow:0_0_10px_rgba(255,140,0,0.15)]">
                     X (Twitter)
                   </span>
                 </Link>
                 <span className="opacity-50">, </span>
                 <Link
-                  href="https://www.instagram.com/basementdotstudio"
+                  href="https://www.instagram.com/automatrix.ia"
                   target="_blank"
                 >
                   <span className="actionable [text-shadow:0_0_10px_rgba(255,140,0,0.15)]">
@@ -271,14 +271,14 @@ export const ContactScreen = () => {
                   </span>
                 </Link>
                 <span className="opacity-50">, </span>
-                <Link href="https://github.com/basementstudio" target="_blank">
+                <Link href="https://github.com/morfeu333" target="_blank">
                   <span className="actionable [text-shadow:0_0_10px_rgba(255,140,0,0.15)]">
                     GitHub
                   </span>
                 </Link>
               </div>
-              <Link href="mailto:hello@automatrix.studio" target="_blank">
-                <span className="actionable">(hello@automatrix.studio)</span>
+              <Link href="mailto:lucas@automatrix-ia.com" target="_blank">
+                <span className="actionable">(lucas@automatrix-ia.com)</span>
               </Link>
             </div>
           </div>

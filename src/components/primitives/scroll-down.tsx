@@ -78,7 +78,7 @@ export const ScrollDown = () => {
               {...animationProps}
             >
               <span className="actionable-opacity user-select-none flex w-fit items-center gap-x-2 !text-f-h4-mobile text-brand-w1">
-                Scroll to Explore{" "}
+                Role para explorar{" "}
                 <span className="translate-y-[12.25%]">
                   <ArrowDownIcon className="size-3 animate-bounce" />
                 </span>

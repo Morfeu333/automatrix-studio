@@ -193,7 +193,7 @@ const DesktopContent = memo(({ links }: NavbarContentProps) => {
             >
               {link.title}
             </Link>
-            {link.count && (
+            {(link.count ?? 0) > 0 && (
               <sup className="text-caption text-brand-g1">({link.count})</sup>
             )}
           </div>
@@ -211,7 +211,7 @@ const DesktopContent = memo(({ links }: NavbarContentProps) => {
             isContactOpen && "text-brand-g1"
           )}
         >
-          <span className="actionable-opacity">Contact Us</span>
+          <span className="actionable-opacity">Contato</span>
         </button>
       </div>
     </>

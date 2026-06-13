@@ -18,7 +18,7 @@ import {
 import { Values } from "./values"
 
 export const metadata: Metadata = {
-  title: "Equipe | Automatrix IA",
+  title: "Equipe",
   description:
     "Conheça a equipe da Automatrix IA — Lucas (CEO/Dev), Leo (Full-Stack), Henrique (Colaborador).",
   alternates: {

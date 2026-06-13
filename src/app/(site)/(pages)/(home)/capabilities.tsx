@@ -10,7 +10,7 @@ export const Capabilities = ({ data }: { data: HomepageData }) => {
   return (
     <div className="grid-layout">
       <h3 className="col-span-full mb-2 text-f-h3-mobile text-brand-g1 lg:col-start-2 lg:text-f-h3 2xl:col-start-3">
-        Capabilities
+        Capacidades
       </h3>
 
       {intro ? (

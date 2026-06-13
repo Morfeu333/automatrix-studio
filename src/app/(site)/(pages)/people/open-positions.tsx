@@ -10,21 +10,21 @@ export const OpenPositions = ({ data }: { data: OpenPositionItem[] }) => (
     id="open-positions"
   >
     <h2 className="relative z-20 col-span-full text-f-h1-mobile text-brand-w2 lg:col-start-1 lg:col-end-5 lg:row-start-1 lg:text-f-h1">
-      Open <br className="hidden lg:block" />
-      Positions
+      Vagas <br className="hidden lg:block" />
+      Abertas
     </h2>
 
     <ul className="relative col-span-full text-brand-w2 lg:row-start-1">
       <li className="group relative grid grid-cols-12 gap-2">
         <div className="relative col-span-full grid grid-cols-8 items-center gap-2 pb-2 text-brand-g1 after:absolute after:bottom-0 after:left-0 after:w-full after:border-b after:border-brand-w2/20 lg:col-start-5 lg:col-end-13">
           <span className="col-start-1 col-end-5 text-f-h4-mobile lg:text-f-h4">
-            Role
+            Cargo
           </span>
           <span className="col-start-5 col-end-7 text-f-h4-mobile lg:text-f-h4">
-            Type
+            Tipo
           </span>
           <span className="hidden text-f-h4-mobile lg:inline-block lg:text-f-h4">
-            Location
+            Local
           </span>
         </div>
       </li>
@@ -59,13 +59,10 @@ export const OpenPositions = ({ data }: { data: OpenPositionItem[] }) => (
               </span>
               <p className="actionable mt-[3px] gap-0.5 text-f-p-mobile lg:mt-0 lg:text-f-p">
                 {!isOpen ? (
-                  "(closed)"
+                  "(encerrada)"
                 ) : (
                   <>
-                    Apply
-                    <span className="hidden lg:block [@media(width:1024px)]:hidden">
-                      Now
-                    </span>
+                    Candidatar
                     <Arrow className="size-4" />
                   </>
                 )}
