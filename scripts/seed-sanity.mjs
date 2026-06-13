@@ -116,39 +116,46 @@ async function seed() {
   console.log("✓ homepage")
 
   // -----------------------------------------------------------------------
-  // 3. People page
+  // 3. People page (title: string, subheading1/2: block[])
   // -----------------------------------------------------------------------
   await upsert({
     _id: "peoplePage",
     _type: "peoplePage",
-    title: [
+    title: "Equipe",
+    subheading1: [
       {
         _type: "block",
-        _key: "people-title-1",
-        style: "normal",
-        children: [{ _type: "span", _key: "pt1", text: "Equipe" }]
-      }
-    ],
-    subtitle: [
-      {
-        _type: "block",
-        _key: "people-sub-1",
+        _key: "people-sub1-1",
         style: "normal",
         children: [
           {
             _type: "span",
-            _key: "ps1",
+            _key: "ps1-1",
             text: "Pessoas que tornam a automação com IA acessível para todos."
           }
         ]
       }
     ],
-    preOpenPositionsTitle: [
+    subheading2: [
+      {
+        _type: "block",
+        _key: "people-sub2-1",
+        style: "normal",
+        children: [
+          {
+            _type: "span",
+            _key: "ps2-1",
+            text: "Uma equipe multidisciplinar apaixonada por tecnologia e resultados."
+          }
+        ]
+      }
+    ],
+    preOpenPositionsText: [
       {
         _type: "block",
         _key: "pre-op-1",
         style: "normal",
-        children: [{ _type: "span", _key: "pop1", text: "Faça parte da equipe" }]
+        children: [{ _type: "span", _key: "pop1", text: "Quer fazer parte da equipe? Entre em contato." }]
       }
     ]
   })
@@ -255,17 +262,62 @@ async function seed() {
   console.log("✓ showcasePage")
 
   // -----------------------------------------------------------------------
-  // 8. Services page
+  // 8. Services page (title: string, intro: block[])
   // -----------------------------------------------------------------------
   await upsert({
     _id: "servicesPage",
     _type: "servicesPage",
-    title: [
+    title: "Services",
+    intro: [
       {
         _type: "block",
-        _key: "svc-title-1",
+        _key: "svc-intro-1",
         style: "normal",
-        children: [{ _type: "span", _key: "sv1", text: "Nossos Serviços" }]
+        children: [
+          {
+            _type: "span",
+            _key: "si1",
+            text: "Transformamos ideias em soluções automatizadas com IA."
+          }
+        ]
+      }
+    ],
+    serviceCategories: [
+      {
+        _key: "svc-cat-1",
+        title: "Automação de Processos",
+        description: [
+          {
+            _type: "block",
+            _key: "svc-cat-desc-1",
+            style: "normal",
+            children: [{ _type: "span", _key: "sd1", text: "Workflows com n8n, Make e APIs." }]
+          }
+        ]
+      },
+      {
+        _key: "svc-cat-2",
+        title: "Chatbots & Agentes IA",
+        description: [
+          {
+            _type: "block",
+            _key: "svc-cat-desc-2",
+            style: "normal",
+            children: [{ _type: "span", _key: "sd2", text: "Assistentes conversacionais para WhatsApp, web e apps." }]
+          }
+        ]
+      },
+      {
+        _key: "svc-cat-3",
+        title: "Consultoria & Implementação",
+        description: [
+          {
+            _type: "block",
+            _key: "svc-cat-desc-3",
+            style: "normal",
+            children: [{ _type: "span", _key: "sd3", text: "Diagnóstico, estratégia e execução de projetos de IA." }]
+          }
+        ]
       }
     ]
   })

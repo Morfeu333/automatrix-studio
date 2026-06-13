@@ -6,7 +6,7 @@ import { getImageUrl } from "@/service/sanity/helpers"
 import type { ServicesPageData } from "./sanity"
 
 export const VenturesBanner = ({ data }: { data: ServicesPageData }) => {
-  const venture = data.ventures[0]
+  const venture = (data.ventures ?? [])[0]
   if (!venture) return null
 
   const img = getImageUrl(venture.image)
