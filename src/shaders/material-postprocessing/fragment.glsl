@@ -40,10 +40,20 @@ uniform float u404Transition;
 
 uniform float uTime;
 
+// Automatrix cyberpunk FX
+uniform float uChromaticAberration;  // chromatic aberration strength (0.0-0.005)
+uniform float uScanlineOpacity;      // CRT scanline intensity (0.0-0.5)
+uniform float uCyberpunkTint;        // cyan tint strength (0.0-1.0)
+
 const float GOLDEN_ANGLE = 2.399963229728653;
 const float DENSITY = 0.9;
-const float OPACITY_SCANLINE = 0.24;
-const float OPACITY_NOISE = 0.01;
+const float OPACITY_SCANLINE = 0.18;
+const float OPACITY_NOISE = 0.008;
+
+// Automatrix palette
+const vec3 NEON_CYAN  = vec3(0.0, 0.941, 1.0);    // #00f0ff
+const vec3 NEON_GREEN = vec3(0.0, 1.0,  0.533);   // #00ff88
+const vec3 BG_DEEP    = vec3(0.02, 0.031, 0.063); // #050810
 
 // Additional precalculated constants
 const float PI_2 = 6.28318530718; // 2*PI
@@ -220,9 +230,15 @@ void main() {
   vec2 pixelatedUv = floor(vUv * halfResolution) * 2.0 / resolution;
   vec2 pixelatedUvEighth = floor(vUv * eighthResolution) * 8.0 / resolution;
 
-  // Optimized texture reading
+  // Chromatic aberration — RGB channel separation (cyberpunk fx)
+  float aberration = uChromaticAberration * (1.0 + length(vUv - 0.5) * 2.0);
+  vec2 aberrOffset = (vUv - 0.5) * aberration;
+  float r_ch = texture2D(uMainTexture, vUv - aberrOffset).r;
+  float g_ch = texture2D(uMainTexture, vUv).g;
+  float b_ch = texture2D(uMainTexture, vUv + aberrOffset).b;
+
   vec4 baseColorSample = texture2D(uMainTexture, vUv);
-  vec3 color = baseColorSample.rgb;
+  vec3 color = vec3(r_ch, g_ch, b_ch);
 
   // Apply tonemap only once for the main color
   color = tonemap(color);
@@ -298,9 +314,24 @@ void main() {
   color += bloomColor;
   color = clamp(color, 0.0, 1.0);
 
-  // The vignette application remains exactly the same
-  float vignetteFactor = getVignetteFactor(vUv);
-  color = mix(color, vec3(0.0), vignetteFactor);
+  // CRT scanlines — horizontal lines simulating monitor phosphor
+  float scanlineY = floor(vUv.y * resolution.y * 0.5);
+  float scanline = mod(scanlineY, 2.0) < 1.0 ? 1.0 : (1.0 - uScanlineOpacity);
+  color *= mix(1.0, scanline, uScanlineOpacity);
+
+  // Cyberpunk tint — shift shadows toward deep blue, highlights toward cyan
+  float luma = dot(color, vec3(0.299, 0.587, 0.114));
+  vec3 tintedShadow  = mix(color, color * BG_DEEP * 3.0, (1.0 - luma) * uCyberpunkTint * 0.4);
+  vec3 tintedHighlight = mix(tintedShadow, tintedShadow + NEON_CYAN * 0.06, luma * uCyberpunkTint);
+  color = tintedHighlight;
+
+  // Subtle neon green boost on bright areas (data center monitors glow)
+  float brightMask = smoothstep(0.7, 1.0, luma);
+  color = mix(color, color + NEON_GREEN * 0.04, brightMask * uCyberpunkTint);
+
+  // Vignette — heavier than original for cyberpunk feel
+  float vignetteFactor = getVignetteFactor(vUv) * 1.3;
+  color = mix(color, vec3(0.0), clamp(vignetteFactor, 0.0, 1.0));
 
   gl_FragColor = vec4(color, alpha);
 

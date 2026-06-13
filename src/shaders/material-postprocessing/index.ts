@@ -29,7 +29,12 @@ export const createPostProcessingMaterial = () =>
       // Bloom
       uBloomStrength: { value: 1 },
       uBloomRadius: { value: 1 },
-      uBloomThreshold: { value: 1 }
+      uBloomThreshold: { value: 1 },
+
+      // Automatrix cyberpunk FX
+      uChromaticAberration: { value: 0.002 },
+      uScanlineOpacity: { value: 0.12 },
+      uCyberpunkTint: { value: 0.75 }
     },
     vertexShader,
     fragmentShader

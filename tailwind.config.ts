@@ -13,17 +13,23 @@ export default {
       },
       colors: {
         brand: {
-          w1: "#E6E6E6",
-          w2: "#C4C4C4",
-          g1: "#757575",
-          g2: "#2E2E2E",
-          k: "#000000",
-          o: "#FF4D00",
-          o2: "#FF2B00",
-          r: "#E60002",
-          r2: "#FF4D4D",
-          y: "#FFCD1A",
-          g: "#00FF9B"
+          // Automatrix cyberpunk palette
+          bg: "#050810",         // deep space black
+          cyan: "#00f0ff",       // neon cyan (primary)
+          green: "#00ff88",      // matrix green (secondary)
+          purple: "#7B2FFF",     // violet accent
+          w1: "#e8f4f8",         // cold white
+          w2: "#a0bcc8",         // muted blue-white
+          g1: "#4a6880",         // dark blue-grey
+          g2: "#1a2535",         // near-black blue
+          k: "#050810",          // background
+          // Legacy aliases kept for component compat
+          o: "#00f0ff",
+          o2: "#00d4e8",
+          r: "#7B2FFF",
+          r2: "#9d5fff",
+          y: "#00ff88",
+          g: "#00ff88"
         },
         codeblock: {
           o: "#FF4D00",
