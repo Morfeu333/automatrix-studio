@@ -48,12 +48,12 @@ export const Navbar = async () => {
       key="navbar-content"
       links={LINKS}
       socialLinks={{
-        twitter: companyInfo.twitter || "https://x.com/automatrix_ai",
-        instagram: companyInfo.instagram || "https://instagram.com/automatrix.ia",
-        github: companyInfo.github || "https://github.com/morfeu333",
-        linkedIn: companyInfo.linkedIn || ""
+        twitter: companyInfo?.twitter || "https://x.com/automatrix_ai",
+        instagram: companyInfo?.instagram || "https://instagram.com/automatrix.ia",
+        github: companyInfo?.github || "https://github.com/morfeu333",
+        linkedIn: companyInfo?.linkedIn || ""
       }}
-      newsletter={companyInfo.newsletter || []}
+      newsletter={companyInfo?.newsletter || []}
     />
   )
 }

@@ -20,11 +20,19 @@ export async function sanityFetch<T>({
   /** Override the perspective. Pass "published" in generateStaticParams / generateMetadata. */
   perspective?: Perspective
 }): Promise<T> {
-  const { data } = await liveSanityFetch({
-    query,
-    params,
-    stega,
-    perspective
-  })
-  return data as T
+  try {
+    const { data } = await liveSanityFetch({
+      query,
+      params,
+      stega,
+      perspective
+    })
+    return data as T
+  } catch (err) {
+    // Dataset may not exist yet — return null so pages render with fallback content
+    if (process.env.NODE_ENV === "development") {
+      console.warn("[Sanity] fetch failed (dataset missing?):", (err as Error).message)
+    }
+    return null as T
+  }
 }

@@ -24,20 +24,54 @@ export const metadata: Metadata = {
   }
 }
 
+const FALLBACK_DATA = {
+  homepage: {
+    introTitle: null,
+    introSubtitle: null,
+    capabilitiesIntro: null,
+    featuredProjects: null,
+    capabilities: null,
+    clients: null
+  }
+}
+
+const FALLBACK_ORG = {
+  description: "Automatize com Inteligência Artificial",
+  foundingDate: "2024",
+  email: "lucas@automatrix-ia.com",
+  addressCity: "Brasil",
+  addressRegion: null,
+  addressCountry: "BR",
+  logoUrl: null,
+  founders: [{ name: "Lucas", url: null, jobTitle: "CEO" }],
+  awards: [],
+  social: {
+    github: "https://github.com/morfeu333",
+    instagram: "https://instagram.com/automatrix.ia",
+    twitter: "https://x.com/automatrix_ai",
+    linkedIn: null
+  }
+}
+
 const Homepage = async () => {
   const [data, orgData] = await Promise.all([
     fetchHomepage(),
     fetchOrganizationData()
   ])
 
+  const safeData: typeof FALLBACK_DATA = {
+    homepage: data?.homepage ?? FALLBACK_DATA.homepage
+  }
+  const safeOrg = orgData ?? FALLBACK_ORG
+
   return (
     <div className="flex flex-col gap-18 lg:gap-32">
-      <JsonLd data={generateOrganizationSchema(orgData)} />
+      <JsonLd data={generateOrganizationSchema(safeOrg)} />
       <JsonLd data={generateWebSiteSchema()} />
-      <Intro data={data} />
-      <Brands data={data} />
-      <FeaturedProjects data={data} />
-      <Capabilities data={data} />
+      <Intro data={safeData} />
+      <Brands data={safeData} />
+      <FeaturedProjects data={safeData} />
+      <Capabilities data={safeData} />
       <Contact />
     </div>
   )

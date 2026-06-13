@@ -10,7 +10,9 @@ const warnedMissingInspectables = new Set<string>()
 
 /** Joins the repo manifest with Sanity content into one `AssetsResult`. */
 export async function fetchAssetsLocal(): Promise<AssetsResult> {
-  const config = await fetchThreeDConfig()
+  const rawConfig = await fetchThreeDConfig()
+  // sanityFetch returns null when the dataset doesn't exist yet
+  const config = rawConfig ?? { inspectables: null, scenes: null, physics: null }
 
   const inspectableContentById = new Map(
     (config.inspectables ?? []).map((c) => [c.inspectableId ?? "", c])
